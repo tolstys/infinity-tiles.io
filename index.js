@@ -17,7 +17,7 @@ bot.on("callback_query", function (query) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
     } else {
         queries[query.id] = query;
-        let gameurl = "http://tolsty.bget.ru/tiles/";
+        let gameurl = "https://github.com/tolstys/infinity_tiles";
         bot.answerCallbackQuery({
             callback_query_id: query.id,
             url: gameurl
