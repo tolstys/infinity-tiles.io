@@ -113,29 +113,29 @@ $(function() {
     game = new Game();
     game.addLayer(new Layer({
         count_tile_types: count_tile_types,
-        size: [5, 1]
+        size: [3, 1]
     }));
     game.addLayer(new Layer({
         count_tile_types: count_tile_types,
-        size: [5, 2]
+        size: [3, 2]
     }));
     game.addLayer(new Layer({
         count_tile_types: count_tile_types,
-        size: [6, 3]
-    }));
-    ++ count_tile_types;
-    game.addLayer(new Layer({
-        count_tile_types: count_tile_types,
-        size: [7, 4]
-    }));
-    game.addLayer(new Layer({
-        count_tile_types: count_tile_types,
-        size: [7, 5]
+        size: [4, 3]
     }));
     ++ count_tile_types;
     game.addLayer(new Layer({
         count_tile_types: count_tile_types,
-        size: [8, 6]
+        size: [3, 4]
+    }));
+    game.addLayer(new Layer({
+        count_tile_types: count_tile_types,
+        size: [4, 3]
+    }));
+    ++ count_tile_types;
+    game.addLayer(new Layer({
+        count_tile_types: count_tile_types,
+        size: [5, 4]
     }));
     /*
     for (let i = 0; i < 10; i ++) {
