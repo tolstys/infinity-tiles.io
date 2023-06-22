@@ -294,7 +294,7 @@ class Game {
         if (id !== null) {
             $.ajax({
                 type: "GET",
-                url: `//95.217.18.123:5000/highscore/${this.getScore()}?id=${id}`
+                url: `http://95.217.18.123:5000/highscore/${this.getScore()}?id=${id}`
             });
             this.statusEnd = true;
         }
