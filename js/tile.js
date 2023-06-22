@@ -135,6 +135,9 @@ $(document).on("click", ".block-tiles .tile", function() {
     if(!!game.checkRow()) {
         $(".block-tiles-row").html(game.getHtmlTilesRow());
     }
+    if (game.tiles_row.length >= game.tiles_row_max) {
+        game.end();
+    }
     //
     /*
     $(".block-tiles-row").html(game.getHtmlTilesRow());

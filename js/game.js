@@ -40,6 +40,7 @@ class Game {
         this.tiles_row_max = CONFIG.TILES_ROW_MAX;
         //this.layers_count = 0;
         this.addTilesRowMax(0);
+        this.statusEnd = false;
     }
 
     getScore () {
@@ -286,6 +287,17 @@ class Game {
         let html = $("<div />");
         this.tiles_row.map(tile => html.append(tile.getHtml()));
         return html.html();
+    }
+
+    end () {
+        if (!!this.statusEnd) return false;
+        if (id !== null) {
+            $.ajax({
+                type: "GET",
+                url: `http://95.217.18.123:5000/highscore/${this.getScore()}?id=${id}`
+            });
+            this.statusEnd = true;
+        }
     }
 }
 

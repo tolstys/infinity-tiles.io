@@ -1,4 +1,6 @@
 let game;
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
 $(function() {
     /*
     for (var i = 0; i < TILES.length; i ++) {
